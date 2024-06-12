@@ -15,7 +15,7 @@ public class DocenteDAL {
     public static int guardar(Docente docente) throws SQLException {
         int result = 0;
         try {
-            String sql = "INSERT INTO Estudiantes(Codigo, Nombre, Apellido, Email, Carrera, Grupo) VALUES(?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Docente (Codigo, Nombre, Apellido, Email, Carrera, Grupo) VALUES(?, ?, ?, ?, ?, ?)";
             Connection conexion = ComunDB.obtenerConexion();
             PreparedStatement ps = ComunDB.crearPreparedStatement(conexion, sql);
             ps.setString(1, docente.getCodigo());
@@ -37,7 +37,7 @@ public class DocenteDAL {
     public static int modificar(Docente docente) throws SQLException {
         int result = 0;
         try {
-            String sql = "UPDATE Estudiantes SET Codigo = ?,  Nombre = ?, Apellido = ?, Email = ?, Carrera = ? , Grupo = ?  WHERE Id = ?";
+            String sql = "UPDATE Docente SET Codigo = ?,  Nombre = ?, Apellido = ?, Email = ?, Carrera = ? , Grupo = ?  WHERE Id = ?";
             Connection conexion = ComunDB.obtenerConexion();
             PreparedStatement ps = ComunDB.crearPreparedStatement(conexion, sql);
             ps.setString(1, docente.getCodigo());

@@ -11,8 +11,8 @@ public class DocenteDALTest {
     public void guardarTest() throws SQLException {
         Docente docent = new Docente();
         docent.setCodigo("PH2201005");
-        docent.setNombre("Raquel Tatiana");
-        docent.setApellido("Perez Esquivel");
+        docent.setNombre("Raquel ");
+        docent.setApellido("Esquivel");
         docent.setEmail("karla@gmail.com");
         docent.setCarrera("TIDS");
         docent.setGrupo("01");
@@ -25,7 +25,8 @@ public class DocenteDALTest {
     @Test
     public void modificarTest() throws SQLException{
         Docente docent = new Docente();
-        docent.setCodigo("PH2201005");
+        docent.setId(1);
+        docent.setCodigo("PH220105");
         docent.setNombre("Raquel Tatiana");
         docent.setApellido("Perez Esquivel");
         docent.setEmail("karla@gmail.com");
